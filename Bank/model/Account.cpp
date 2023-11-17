@@ -7,9 +7,9 @@
 #include <string>
 #include <cmath>
 using namespace std;
-
 double Account::total = 0;
 
+// Account类的实现
 Account::Account(const Date &date, const std::string &id)
     : id(id), balance(0) {
     date.show();
@@ -32,7 +32,7 @@ void Account::error(const std::string &msg) const {
     cout << "Error(#"<< id << "): " << msg << endl;
 }
 
-//SavingsAccount()
+// SavingsAccount类相关函数成员的实现
 SavingsAccount::SavingsAccount(const Date &date, double amount, const std::string &id, double rate)
     : Account(date, id), rate(rate), acc(date, 0) {}
 
@@ -52,19 +52,17 @@ void SavingsAccount::withdraw(const Date &date, double amount, const std::string
 }
 
 void SavingsAccount::settle(const Date &date) {
-    double interest = acc.getSum(date) * rate;
-    if(interest != 0)
-        record(date, interest, "interest");
-    acc.reset(date, getBalance());
+    if(date.getMonth() == 1) {
+        double interest = acc.getSum(date) * rate / (date - Date(date.getYear() - 1, 1, 1));
+        if(interest != 0)
+            record(date, interest, "interest");
+        acc.reset(date, getBalance());
+    }
 }
 
-// CreditAccount()
+// CreditAccount类相关成员函数的实现
 CreditAccount::CreditAccount(const Date &date, const std::string &id, double credit, double rate, double fee)
-    : Account(date, id), credit(credit), rate(rate), fee(fee), acc(date, 0) {
-
-}
-
-
+    : Account(date, id), credit(credit), rate(rate), fee(fee), acc(date, 0) {}
 
 void CreditAccount::deposit(const Date &date, double amount, const std::string &desc) {
     record(date, amount, desc);
@@ -72,5 +70,24 @@ void CreditAccount::deposit(const Date &date, double amount, const std::string &
 }
 
 void CreditAccount::withdraw(const Date &date, double amount, const std::string &desc) {
+    if(amount - getBalance() > credit) {
+        error("not enough money");
+    }
+    else {
+        record(date, -amount, desc);
+        acc.change(date, getDebt());
+    }
+}
 
+void CreditAccount::settle(const Date &date) {
+    double interest = acc.getSum(date) * rate;
+    if(interest != 0)
+        record(date, interest, "interest");
+    if(date.getMonth() == 1)
+        record(date, -fee, "annual fee");
+    acc.reset(date, getDebt());
+}
+void CreditAccount::show() const {
+    Account::show();
+    cout << "\tAvailable credit: " << getAvailableCredit() << endl;
 }
