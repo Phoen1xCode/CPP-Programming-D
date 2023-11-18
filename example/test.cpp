@@ -3,7 +3,6 @@
 using namespace std;
 
 int main(){
-    int a=15, b=26;
-    cout << (a,b);
+    cout << "HelloWorld" << endl;
     return 0;
 }
