@@ -8,7 +8,6 @@ add_executable(Bank main.cpp
         model/Date.h
         model/Account.cpp
         model/Account.h
-        model/Accumulator.cpp
         model/Accumulator.h
         main.cpp
         main.cpp)

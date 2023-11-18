@@ -67,12 +67,6 @@ build CMakeFiles/Bank.dir/model/Account.cpp.obj: CXX_COMPILER__Bank_unscanned_De
   OBJECT_DIR = CMakeFiles\Bank.dir
   OBJECT_FILE_DIR = CMakeFiles\Bank.dir\model
 
-build CMakeFiles/Bank.dir/model/Accumulator.cpp.obj: CXX_COMPILER__Bank_unscanned_Debug X$:/Class/Programming$ D/source$ code/Bank/model/Accumulator.cpp || cmake_object_order_depends_target_Bank
-  DEP_FILE = CMakeFiles\Bank.dir\model\Accumulator.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Bank.dir
-  OBJECT_FILE_DIR = CMakeFiles\Bank.dir\model
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Bank
@@ -81,7 +75,7 @@ build CMakeFiles/Bank.dir/model/Accumulator.cpp.obj: CXX_COMPILER__Bank_unscanne
 #############################################
 # Link the executable Bank.exe
 
-build Bank.exe: CXX_EXECUTABLE_LINKER__Bank_Debug CMakeFiles/Bank.dir/main.cpp.obj CMakeFiles/Bank.dir/model/Date.cpp.obj CMakeFiles/Bank.dir/model/Account.cpp.obj CMakeFiles/Bank.dir/model/Accumulator.cpp.obj
+build Bank.exe: CXX_EXECUTABLE_LINKER__Bank_Debug CMakeFiles/Bank.dir/main.cpp.obj CMakeFiles/Bank.dir/model/Date.cpp.obj CMakeFiles/Bank.dir/model/Account.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Bank.dir
