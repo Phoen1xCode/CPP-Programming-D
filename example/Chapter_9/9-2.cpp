@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <cstring>
 using namespace std;
 
 // 结构体 Student
@@ -29,10 +30,10 @@ T &Store<T>::getElem() {
         cout << "No item present!" << endl;
         exit(1); // 使程序完全退出，返回到操作系统
         // 参数可用来表示程序终止的原因，可以被操作系统接收
-    }
+    }s
 }
 
-template <class T>  //存入数据函数的实现
+template <class T>  //存入数据函数的实现   
 void Store<T>::putElem(const T &x) {
     haveValue = true; // 将haveValue置为true,表示item中以存入数值
     item = x; // 将x值存入item

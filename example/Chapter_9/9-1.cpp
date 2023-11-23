@@ -22,6 +22,5 @@ int main() {
     cout << "c array contains:" << endl;
     outputArray(c, C_COUNT);
 
-
     return 0;
 }
