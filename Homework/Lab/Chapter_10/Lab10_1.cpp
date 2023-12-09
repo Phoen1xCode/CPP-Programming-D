@@ -1,3 +1,5 @@
+// 使用C++标准模板库(STL)中的双向队列类(deque)重新实现实验9中实验任务(2)
+// 声明两个整形链表A和B,分别插入5个元素，然后把B中的元素加入A的尾部
 #include <iostream>
 #include <deque>
 
