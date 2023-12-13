@@ -2,7 +2,6 @@
 #ifndef NODE_H
 #define NODE_H
 
-// 类模板的定义
 template <typename T>
 class Node {
 public:

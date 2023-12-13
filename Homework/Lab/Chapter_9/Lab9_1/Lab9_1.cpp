@@ -2,20 +2,20 @@
 #include <iostream>
 
 int main() {
-    // 步骤1: 创建节点
+
     Node<int> *head = new Node<int>(1); // 创建头结点
     Node<int> *node2 = new Node<int>(2); // 创建第二个节点
     head->insertAfter(node2); // 将第二个节点插入头结点之后
 
-    // 步骤2: 在第一个节点之后插入一个新节点
+
     Node<int> *node3 = new Node<int>(3); // 创建第三个节点
     head->insertAfter(node3); // 将第三个节点插入头结点之后
 
-    // 步骤3: 删除新插入节点（第三个节点）之后的节点（即第二个节点）
+
     Node<int> *deletedNode = node3->deleteAfter(); // 删除第三个节点之后的节点并获取其地址
     delete deletedNode; // 释放被删除节点的内存
 
-    // 步骤4: 遍历并打印链表
+
     Node<int> *current = head; // 从头结点开始遍历
     while (current != nullptr) {
         std::cout << current->data << " "; // 打印当前节点数据
@@ -23,7 +23,7 @@ int main() {
     }
     std::cout << std::endl;
 
-    // 步骤5: 清理分配的节点，防止内存泄漏
+
     while (head != nullptr) {
         Node<int> *next = head->nextNode(); // 获取下一个节点的地址
         delete head; // 删除当前节点
