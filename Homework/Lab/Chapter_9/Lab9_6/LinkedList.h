@@ -158,6 +158,10 @@ public:
         }
     }
 
+    Node<T>* getFront() const {
+        return front;
+    }
+
 private:
     Node<T> *front, *rear;
     Node<T> *prevPtr, *currPtr;
