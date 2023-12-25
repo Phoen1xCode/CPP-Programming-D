@@ -1,7 +1,0 @@
-# ninja log v5
-2	236	7219358798283538	CMakeFiles/Bank.dir/main.cpp.obj	bd5e0b1806145bbb
-35	1014	7219357021413020	CMakeFiles/Bank.dir/model/main.cpp.obj	9e198d6247232df5
-47	1014	7219357021413020	CMakeFiles/Bank.dir/model/Accumulator.cpp.obj	8da4c7b99a1c1533
-12	1015	7219357021423020	CMakeFiles/Bank.dir/model/Date.cpp.obj	11bafc0f5e0d96a5
-24	1018	7219357021453111	CMakeFiles/Bank.dir/model/Account.cpp.obj	2c803fda7d8d329e
-237	315	7219358799038058	Bank.exe	2b69d41bbb525536

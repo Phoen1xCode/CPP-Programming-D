@@ -1,3 +1,0 @@
-X:/Class/Programming D/source code/Bank/cmake-build-debug/CMakeFiles/Bank.dir
-X:/Class/Programming D/source code/Bank/cmake-build-debug/CMakeFiles/edit_cache.dir
-X:/Class/Programming D/source code/Bank/cmake-build-debug/CMakeFiles/rebuild_cache.dir
